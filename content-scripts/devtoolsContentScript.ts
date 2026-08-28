@@ -34,7 +34,7 @@ export function devToolsContentScript(
   let wprDiagnoserData: DiagnoserData | undefined = undefined;
   let pageHTML: null | string = null;
   let dataProcessed = false;
-  const consoleMessage = 'WPR Front Debugging tool';
+  const consoleMessage = 'WPR Front Debugging tool legacy';
   setEvents();
   document.addEventListener('DOMContentLoaded', async () => {
     if (pageHTML) return;

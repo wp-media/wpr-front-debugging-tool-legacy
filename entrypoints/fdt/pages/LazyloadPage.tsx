@@ -142,7 +142,7 @@ export default function LazyloadResourcesPage(props: {
                               resource.excludedReasons.length === 0
                                 ? `No reasons found`
                                 : resource.excludedReasons.includes(FDTExcludedResource)
-                                  ? 'Excluded by FDT'
+                                  ? 'Excluded by FDT legacy'
                                   : `Excluded reasons found: "${resource.excludedReasons!.join('", "')}"`,
                               false
                             ]

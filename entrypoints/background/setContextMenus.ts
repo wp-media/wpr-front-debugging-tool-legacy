@@ -46,7 +46,7 @@ function createContextMenuItems(URLPatterns: Array<string>): void {
           // Without this, Chrome logs "Unchecked runtime.lastError".
           if (browser.runtime.lastError) {
             console.warn(
-              `[WPR FDT] Failed to create context menu "${item.id}":`,
+              `[WPR FDT legacy] Failed to create context menu "${item.id}":`,
               browser.runtime.lastError.message
             );
           }
@@ -54,7 +54,7 @@ function createContextMenuItems(URLPatterns: Array<string>): void {
       }
     })
     .catch((error) => {
-      console.warn('[WPR FDT] Failed to remove existing context menus:', error);
+      console.warn('[WPR FDT legacy] Failed to remove existing context menus:', error);
     });
 }
 

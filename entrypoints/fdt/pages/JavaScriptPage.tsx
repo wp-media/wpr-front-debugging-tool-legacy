@@ -209,7 +209,7 @@ function formatLabel(resource: ScriptResource, feature: 'delay_js' | 'defer_all_
   if (feature === 'delay_js') {
     if (resource.delayed) return 'Delayed';
     if (resource.fdtExcluded && resource.fdtExcluded.includes('delay_js')) {
-      return 'Not delayed (Excluded by FDT)';
+      return 'Not delayed (Excluded by FDT legacy)';
     }
     return 'Not delayed';
   }
@@ -217,7 +217,7 @@ function formatLabel(resource: ScriptResource, feature: 'delay_js' | 'defer_all_
     if (resource.deferredByWPR) return 'Deferred (By WP Rocket)';
     else if (resource.deferred) return 'Deferred';
     if (resource.fdtExcluded && resource.fdtExcluded.includes('defer_all_js')) {
-      return 'Not deferred (Excluded by FDT)';
+      return 'Not deferred (Excluded by FDT legacy)';
     }
     return 'Not deferred';
   }

@@ -49,7 +49,7 @@ const createSubPanels = async () => {
  * Creates the WPR FDT panel in the devtools
  */
 const createFDTPanel = () => {
-  chrome.devtools.panels.create('WPR FDT', 'icon/32.png', 'fdt.html', (panel) => {
+  chrome.devtools.panels.create('WPR FDT legacy', 'icon/32.png', 'fdt.html', (panel) => {
     panel.onSearch.addListener((action, queryString) => {
       sendMessage(
         Channels.devToolsSearch,

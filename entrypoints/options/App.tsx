@@ -53,7 +53,7 @@ const sections: Section<OptionSections, ImprovementOption>[] = [
   // }
 ];
 
-export default function WPRFrontDebuggingOptions() {
+export default function WPRFrontDebuggingOptionsLegacy() {
   const [sectionStates, setSectionStates] = useState(sections);
   const [isSaving, setIsSaving] = useState(false);
   const [saveButtonText, setSaveButtonText] = useState('Save');
@@ -120,7 +120,7 @@ export default function WPRFrontDebuggingOptions() {
           className="max-w-3xl mx-auto"
         >
           <h1 className="text-4xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 leading-normal">
-            WPR Front Debugging tool - Options Page
+            WPR Front Debugging tool legacy - Options Page
           </h1>
 
           <motion.div

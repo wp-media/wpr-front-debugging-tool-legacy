@@ -1,4 +1,4 @@
-# WPR Fron Debugging tool
+# WPR Front Debugging tool legacy
 
 A browsers extension tool to debug WP Rocket WordPress plugin.
 
