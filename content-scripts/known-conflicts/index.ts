@@ -135,7 +135,9 @@ export async function knownConflictsContentScript() {
   }
   function getKnownConflictsWP() {
     let allText = '';
-    const pluginTitles = Array.from(document.querySelectorAll('td.plugin-title.column-primary'));
+    const pluginTitles = Array.from(
+      document.querySelectorAll('th.plugin-title.column-primary, td.plugin-title.column-primary')
+    );
     if (!pluginTitles.length) return;
     for (const title of pluginTitles) {
       allText += title.textContent ?? '';
@@ -169,8 +171,8 @@ export async function knownConflictsContentScript() {
     for (const conflict of detectedConflictsList) {
       const listItem = document.createElement('div');
       listItem.classList.add('list-item');
-      (listItem.innerHTML = `<strong>${conflict.name}</strong>${conflict.summary ? ' - ' + conflict.summary : ''}`),
-        conflict;
+      ((listItem.innerHTML = `<strong>${conflict.name}</strong>${conflict.summary ? ' - ' + conflict.summary : ''}`),
+        conflict);
       if (conflict.url) {
         listItem.addEventListener('click', () => {
           window.open(conflict.url, '__blank');
